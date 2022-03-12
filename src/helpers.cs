@@ -37,7 +37,7 @@ namespace Leopotam.EcsLite.Threads {
             var processed = 0;
             var jobSize = count / DescsCount;
             int workersCount;
-            if (jobSize > chunkSize) {
+            if (jobSize >= chunkSize) {
                 workersCount = DescsCount;
             } else {
                 workersCount = count / chunkSize;
